@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+    <main ng-app='myapp' ng-controller='myctrl' ng-init="history=0" >
+      <div id="display">
+        
+        <div id="result" ng-bind='result'></div>
+        <div id="history" ng-bind="history"></div>
+      </div>
+      <div id="buttons">
+        <button class="operation" id="all-clear" ng-click="action('allclear')">AC</button>
+        <button class="operation" id="all-clear" ng-click="action('clear')">BS</button>
+
+        <button class="number"  value="7" ng-click=number(7)>7</button>
+        <button class="number" value="8" ng-click=number(8)>8</button>
+        <button class="number" value="9" ng-click=number(9)>9</button>
+        <button class="operator" id="div" value="/" ng-click="operator('/')">/</button>
+
+        <button class="number" value="4" ng-click=number(4)>4</button>
+        <button class="number" value="5" ng-click=number(5)>5</button>
+        <button class="number" value="6" ng-click=number(6)>6</button>
+        <button class="operator" id="mul" value="x" ng-click="operator('x')">x</button>
+
+        <button class="number" value="1" ng-click=number(1)>1</button>
+        <button class="number" value="2" ng-click=number(2)>2</button>
+        <button class="number" value="3" ng-click=number(3)>3</button>
+        <button class="operator" id="sub" value="-" ng-click="operator('-')">-</button>
+
+        <button class="number" value=".">.</button>
+        <button class="number" value="0">0</button>
+        <button class="operation" id="equal-to" value="=" ng-click="operator('=')">=</button>
+        <button class="operator" id="add" value="+" ng-click="operator('+')">+</button>
+      </div>
+ 
+    </main>
+
+    <footer>
+      <p>Coded by Mugilan</p>
+    </footer>
+
+    <script src='js/calc.js'></script>
+    
+  
+  </body>
+</html>

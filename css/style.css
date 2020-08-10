@@ -1,0 +1,128 @@
+/* mobile portrait: less than 640px */
+html {
+  background: rgba(59, 54, 54, 0.9);
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  flex: 19;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1rem solid rgba(230, 224, 224, 0.9);
+  width: 100%;
+}
+
+#display {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba(15, 11, 11, 0.801);
+}
+
+#history,
+#result {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 4rem;
+}
+
+#history {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+#buttons {
+  flex: 8;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.4rem;
+  margin: 0.4rem;
+}
+
+#all-clear {
+  grid-column: span 2;
+}
+
+button {
+  background: black;
+  color: white;
+  font-size: 2.5rem;
+  border: none;
+}
+
+#equal-to {
+  background: white;
+  color: black;
+}
+
+footer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/*
+** Media Queries
+*/
+
+/* mobile landscape: > 640px */
+@media (min-width: 640px) {
+  main {
+    flex: 18;
+  }
+
+  footer {
+    flex: 2;
+  }
+
+  #display {
+    flex: 3;
+  }
+
+  #buttons {
+    flex: 7;
+  }
+}
+
+/* tablet portrait: > 768px */
+@media (min-width: 768px) {
+  main {
+    width: 75%;
+  }
+}
+
+/* tablet landscape: > 1024px */
+@media (min-width: 1024px) {
+  main {
+    width: 50%;
+  }
+}
+
+/* laptop: > 1280px */
+@media (min-width: 1280px) {
+  main {
+    width: 45%;
+  }
+}
